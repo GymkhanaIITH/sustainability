@@ -1,0 +1,34 @@
+---
+import Navbar from "../components/Navbar.astro";
+import HomeContent from "./HomeContent.astro";
+import AltContent from "./AltContent.astro";
+---
+
+<Navbar />
+
+<div class="button-container">
+  <button onclick="showPage('home')">Button-1 (Show Home)</button>
+  <button onclick="showPage('alt')">Button-2 (Show Alternate)</button>
+</div>
+
+<!-- Home Page Content -->
+<div id="home-content">
+  <HomeContent />
+</div>
+
+<!-- Alternate Page Content (Initially Hidden) -->
+<div id="alt-content" style="display: none;">
+  <AltContent />
+</div>
+
+<script is:inline>
+  function showPage(page) {
+    if (page === 'home') {
+      document.getElementById("home-content").style.display = "block";
+      document.getElementById("alt-content").style.display = "none";
+    } else {
+      document.getElementById("home-content").style.display = "none";
+      document.getElementById("alt-content").style.display = "block";
+    }
+  }
+</script>
