@@ -1,0 +1,37 @@
+---
+import "../styles/global.css";
+import { Globe , Clipboard , ChartNoAxesCombined , BookText } from "lucide-astro";
+---
+
+<div class="bg-[url('/assets/homeScreen.png')] h-screen w-full bg-cover flex pl-24 items-center">
+    <div class="flex flex-col scale-90">
+        <div class="text-white text-8xl text-left font-bold">
+            SUSTAINABILITY
+            <br>
+            PRACTICES
+        </div>
+        <div class="text-white text-2xl text-left">
+            IITH - Inventing & Innovating in Technology for Humanity.
+        </div>
+        <div class="flex gap-4 mt-24">
+            <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
+                <BookText class="text-emerald-600 mb-2"/>
+                Sustainable Practices 
+                <br>
+                Policy - IITH
+            </div>
+            <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
+                <ChartNoAxesCombined class="text-emerald-600 mb-2"/>
+                Unnat Bharat Abhiyan - IITH
+            </div>
+            <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
+                <Clipboard class="text-emerald-600 mb-2"/>
+                Zero Liq. Discharge Plant - IITH    
+            </div>
+            <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
+                <Globe class="text-emerald-600 mb-2"/>
+                Climate Change - IITH
+            </div>
+        </div>
+    </div>
+</div>
