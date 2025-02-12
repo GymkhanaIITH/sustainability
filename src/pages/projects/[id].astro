@@ -1,0 +1,32 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import projects from "../../configs/projects.json";
+
+export async function getStaticPaths() {
+    return projects.map((item) => ({
+        params: { id: item.readMoreHref.split("/").pop() },
+    }));
+}
+
+const { id } = Astro.params;
+
+const project = projects.find(
+    (item) => item.readMoreHref.split("/").pop() === id
+);
+
+if (!project) {
+    throw new Error(`project not found for ID: ${id}`);
+}
+---
+
+<main class="flex flex-col min-h-screen">
+    <Navbar />
+    <div
+        class="flex flex-col justify-center text-left flex-grow w-1/2 ml-auto m-12 gap-4"
+    >
+        <span class="text-xl font-semibold underline">{project.title}</span>
+        <span class="text-md font-light">{project.readMoreData}</span>
+    </div>
+    <Footer />
+</main>

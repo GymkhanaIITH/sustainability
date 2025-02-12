@@ -1,12 +1,14 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import Landing from "./Landing.astro";
+import Landing from "../components/Landing.astro";
 import Carousel from "../components/Carousel.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 import initiatives from "../configs/initiatives.json";
 import projects from "../configs/projects.json";
-import { Bike, Brush, GraduationCap, Leaf, Sprout } from "lucide-astro";
+import news from "../configs/news.json";
+import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAxesCombined , BookText, Mail, MapPin } from "lucide-astro";
 ---
 
 <Navbar />
@@ -35,77 +37,171 @@ import { Bike, Brush, GraduationCap, Leaf, Sprout } from "lucide-astro";
         </div>
     </div>
     <!-- About IITH Sustainability -->
-    <div class="flex w-fit m-8 p-8 justify-around align-middle">
-        <img src="/assets/hostels.png" class="w-2/5 h-2/5 z-10" />
-        <div class="w-full ml-8 p-2 my-auto">
-            <span class="text-2xl font-semibold">About IIT Hyderabad Sustainability</span>
-            <p class="mt-8 font-light flex flex-col gap-2">
-                <span>
-                IIT Hyderabad is at the forefront of sustainability, addressing climate change through innovative research, practical actions, and capacity building. With a vision to create an eco-friendly campus, IITH integrates cutting-edge technology with impactful initiatives to reduce its environmental footprint and inspire global climate action.
-                </span><span>
-                Recognized for its efforts, IITH received the Haritha Haram Award in 2022, presented by Shri K T Rama Rao, Honorable Minister of Telangana, for its commitment to green practices. Strengthening its focus on sustainability, IITH partnered with Greenko to establish the School for Sustainable Science and Technology, advancing research in renewable energy, waste management, and environmental resilience.
-                </span><span>
-                On campus, sustainability is embedded in daily operations. The 1 MW solar power plant, radiant cooling system, and zero waste policy demonstrate IITH’s dedication to eco-friendly infrastructure. Initiatives like biodigesters, composting, and wastewater recycling ensure efficient resource management.
-                </span><span>
-                Students play a vital role in sustainability, participating in clean-up drives, plantation activities, and cycling promotion programs. These efforts cultivate a culture of environmental responsibility.
-                </span><span>
-                With its innovative practices and active student involvement, IIT Hyderabad is paving the way for a greener future, inspiring sustainable living across the globe
-                </span>
-            </p>
+    <section id="about">
+        <div class="flex w-fit m-8 p-8 justify-around align-middle">
+            <img src="/assets/hostels.png" class="w-2/5 h-2/5 z-10" />
+            <div class="w-full ml-8 p-2 my-auto">
+                <span class="text-2xl font-semibold">About IIT Hyderabad Sustainability</span>
+                <p class="mt-8 font-light flex flex-col gap-2">
+                    <span>
+                    IIT Hyderabad is at the forefront of sustainability, addressing climate change through innovative research, practical actions, and capacity building. With a vision to create an eco-friendly campus, IITH integrates cutting-edge technology with impactful initiatives to reduce its environmental footprint and inspire global climate action.
+                    </span><span>
+                    Recognized for its efforts, IITH received the Haritha Haram Award in 2022, presented by Shri K T Rama Rao, Honorable Minister of Telangana, for its commitment to green practices. Strengthening its focus on sustainability, IITH partnered with Greenko to establish the School for Sustainable Science and Technology, advancing research in renewable energy, waste management, and environmental resilience.
+                    </span><span>
+                    On campus, sustainability is embedded in daily operations. The 1 MW solar power plant, radiant cooling system, and zero waste policy demonstrate IITH’s dedication to eco-friendly infrastructure. Initiatives like biodigesters, composting, and wastewater recycling ensure efficient resource management.
+                    </span><span>
+                    Students play a vital role in sustainability, participating in clean-up drives, plantation activities, and cycling promotion programs. These efforts cultivate a culture of environmental responsibility.
+                    </span><span>
+                    With its innovative practices and active student involvement, IIT Hyderabad is paving the way for a greener future, inspiring sustainable living across the globe
+                    </span>
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
+
     <!-- Our Sustainability Initiatives -->
-    <span class="text-2xl text-center font-bold">Our Sustainability Initiatives</span>
-    <Carousel data={initiatives} isImaged={false}/>
+    <section id="initiatives" class="flex flex-col items-center gap-4">
+        <span class="text-2xl text-center font-bold">Our Sustainability Initiatives</span>
+        <Carousel data={initiatives} isImaged={false}/>
+    </section>
     <!-- Featured Projects -->
-    <span class="text-2xl text-center font-bold">Featured Projects</span>
-    <Carousel data={projects} isImaged={true}/>
+    <section id="projects" class="flex flex-col items-center gap-4">
+        <span class="text-2xl text-center font-bold">Featured Projects</span>
+        <Carousel data={projects} isImaged={true}/>
+    </section>
     <!-- Targets -->
-    <img src="/assets/hostels2.png" class="w-full mt-12"/>
+    <section id="targets">
+        <img src="/assets/hostels2.png" class="w-full mt-12"/>
+    </section>
     <!-- Student Engagement -->
-    <div class="flex w-full m-12 p-6 justify-around items-center">
-        <div class="flex flex-col max-w-lg">
-            <div class="text-2xl font-bold mb-4">Student Engagement in Sustainability</div>
-            <ul class="space-y-4">
-                <li class="flex items-start space-x-3">
-                    <Brush class="text-emerald-600 scale-75"/>
-                    <div>
-                        <span class="font-bold">Monthly Clean-up Drives</span>
-                        <p class="text-gray-600">Regular campus clean-up initiatives led by student volunteers.</p>
-                    </div>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <Sprout class="text-emerald-600 scale-75"/>
-                    <div>
-                        <span class="font-bold">Plantation Events</span>
-                        <p class="text-gray-600">Regular tree plantation drives to enhance campus greenery.</p>
-                    </div>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <Bike class="text-emerald-600 scale-75"/>
-                    <div>
-                        <span class="font-bold">Cycling Culture</span>
-                        <p class="text-gray-600">Reimbursement scheme to promote bicycle usage on campus.</p>
-                    </div>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <Leaf class="text-emerald-600 scale-75"/>
-                    <div>
-                        <span class="font-bold">Prakriti Club</span>
-                        <p class="text-gray-600">A club for nature enthusiasts to contribute effortlessly.</p>
-                    </div>
-                </li>
-                <li class="flex items-start space-x-3">
-                    <GraduationCap class="text-emerald-600 scale-75"/>
-                    <div>
-                        <span class="font-bold">Prayas - The Rural Developing Club</span>
-                        <p class="text-gray-600">Focuses on holistic growth and rural community development.</p>
-                    </div>
-                </li>
-            </ul>
+    <section id="student-led-activities" class="flex flex-col items-center gap-4">
+        <div class="flex w-full p-6 justify-around items-center">
+            <div class="flex flex-col max-w-lg">
+                <div class="text-2xl font-bold mb-4">Student Engagement in Sustainability</div>
+                <ul class="space-y-4">
+                    <li class="flex items-start space-x-3">
+                        <Brush class="text-emerald-600 scale-75"/>
+                        <div>
+                            <span class="font-bold">Monthly Clean-up Drives</span>
+                            <p class="text-gray-600">Regular campus clean-up initiatives led by student volunteers.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <Sprout class="text-emerald-600 scale-75"/>
+                        <div>
+                            <span class="font-bold">Plantation Events</span>
+                            <p class="text-gray-600">Regular tree plantation drives to enhance campus greenery.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <Bike class="text-emerald-600 scale-75"/>
+                        <div>
+                            <span class="font-bold">Cycling Culture</span>
+                            <p class="text-gray-600">Reimbursement scheme to promote bicycle usage on campus.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <Leaf class="text-emerald-600 scale-75"/>
+                        <div>
+                            <span class="font-bold">Prakriti Club</span>
+                            <p class="text-gray-600">A club for nature enthusiasts to contribute effortlessly.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <GraduationCap class="text-emerald-600 scale-75"/>
+                        <div>
+                            <span class="font-bold">Prayas - The Rural Developing Club</span>
+                            <p class="text-gray-600">Focuses on holistic growth and rural community development.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <img src="/assets/sideImg.png" class="w-1/3 rounded-lg"/>
         </div>
-        <img src="/assets/sideImg.png" class="w-1/3 rounded-lg"/>
-    </div>
+    </section>
     <!-- Video Highlights -->
-    <span class="text-2xl ml-48 font-bold">Video Highlights of our progress</span>
+    <section id="video-highlights">
+        <span class="text-2xl ml-48 font-bold">Video Highlights of our progress</span>
+    </section>
+    <!-- Achievements of IITH -->
+    <div class="flex w-full p-12 justify-center">
+        <img src="/assets/IGH.png" class="w-1/3 rounded-lg shadow-lg" />
+        <div class="flex flex-col w-1/2 pl-12">
+            <h2 class="text-2xl font-bold mb-6 underline">Achievements Of IIT-H</h2>
+            <div class="flex gap-12">
+                <div>
+                    <p class="text-2xl font-bold">30000+</p>
+                    <p class="text-md">
+                        <strong>Trees Planted</strong> <br />
+                        Plantation Drive - First Saturday of every month we organize a plantation drive.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold">15+</p>
+                    <p class="text-md">
+                        <strong>Years of experience</strong> <br />
+                        In upcoming years, we will try to contribute more towards sustainable development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest Events and News -->
+    <section id="events" class="flex flex-col items-center gap-4">
+        <span class="text-2xl text-center font-bold">Latest Events and News</span>
+        <Carousel data={news} isImaged={false}/>
+    </section>
+    <!-- Resources -->
+    <div class="flex flex-col scale-90">
+        <div class="text-3xl text-left font-bold">
+            Resources
+        </div>
+        <div class="flex gap-4 mt-8">
+            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                <BookText class="text-emerald-600 mb-2"/>
+                Sustainable Practices 
+                <br>
+                Policy - IITH
+            </div>
+            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                <ChartNoAxesCombined class="text-emerald-600 mb-2"/>
+                Unnat Bharat Abhiyan - IITH
+            </div>
+            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                <Clipboard class="text-emerald-600 mb-2"/>
+                Zero Liq. Discharge Plant - IITH    
+            </div>
+            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                <Globe class="text-emerald-600 mb-2"/>
+                Climate Change - IITH
+            </div>
+        </div>
+    </div>
+    <!-- Contact -->
+    <div class="flex flex-col pl-18 mt-12">
+        <h2 class="text-xl font-bold">Contact</h2>
+        <h3 class="text-2xl font-bold mt-1">OFFICE OF SUSTAINABILITY</h3>
+
+        <div class="mt-4 space-y-3">
+            <div class="flex items-start">
+            <MapPin class="w-5 h-5 mt-1 mr-2" />
+            <p>
+                <strong>Location:</strong> <br />
+                Indian Institute of Technology Hyderabad, Kandi, <br />
+                Sangareddy, Telangana-502284
+            </p>
+            </div>
+
+            <div class="flex items-start">
+            <Mail class="w-5 h-5 mt-1 mr-2" />
+            <p>
+                <strong>Email:</strong> <br />
+                <a href="mailto:nodal.qs@iith.ac.in" class="text-blue-600">
+                nodal.qs@iith.ac.in
+                </a>
+            </p>
+            </div>
+        </div>
+    </div>
 </div>
+<Footer />
