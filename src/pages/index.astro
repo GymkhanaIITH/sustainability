@@ -1,7 +1,9 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Landing from "../components/Landing.astro";
-import Carousel from "../components/Carousel.astro";
+import Carousel_initatives from "../components/Carousel_initiatives.astro";
+import Carousel_projects from "../components/Carousel_projects.astro";
+import Carousel_news from "../components/Carousel_news.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
@@ -62,12 +64,12 @@ import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAx
     <!-- Our Sustainability Initiatives -->
     <section id="initiatives" class="flex flex-col items-center gap-4">
         <span class="text-2xl text-center font-bold">Our Sustainability Initiatives</span>
-        <Carousel data={initiatives} isImaged={false}/>
+        <Carousel_initatives data={initiatives} isImaged={false}/>
     </section>
     <!-- Featured Projects -->
     <section id="projects" class="flex flex-col items-center gap-4">
         <span class="text-2xl text-center font-bold">Featured Projects</span>
-        <Carousel data={projects} isImaged={true}/>
+        <Carousel_projects data={projects} isImaged={true}/>
     </section>
     <!-- Targets -->
     <section id="targets">
@@ -149,7 +151,7 @@ import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAx
     <!-- Latest Events and News -->
     <section id="events" class="flex flex-col items-center gap-4">
         <span class="text-2xl text-center font-bold">Latest Events and News</span>
-        <Carousel data={news} isImaged={false}/>
+        <Carousel_news data={news} isImaged={false}/>
     </section>
     <!-- Resources -->
     <div class="flex flex-col scale-90">
