@@ -17,10 +17,11 @@ import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAx
 <Landing />
 <div class="bg-white flex flex-col">
     <!-- Director's Message -->
-    <div class="flex w-fit m-8 p-8 justify-around align-middle">
-        <img src="/assets/director.png" class="w-2/5 h-2/5 z-10" />
-        <div class="w-full ml-8 p-2 my-auto">
-            <span class="text-2xl font-semibold">Message from our Director</span>
+    <div class="flex flex-col-reverse lg:flex-row w-fit m-8 p-8 justify-around align-middle">
+        <img src="/assets/director.png" class="hidden lg:block w-2/5 h-2/5 z-10" />
+        <div class="w-full lg:ml-8 p-2 my-auto items-center">
+            <span class="text-4xl lg:text-2xl font-bold">Message from our Director</span>
+            <img src="/assets/director.png" class="block mt-8 lg:mt-0 lg:hidden w-full aspect-square z-10" />
             <p class="mt-8 font-light">
                 Dear friends,
                 <p class="mt-4 font-light">
@@ -40,10 +41,11 @@ import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAx
     </div>
     <!-- About IITH Sustainability -->
     <section id="about">
-        <div class="flex w-fit m-8 p-8 justify-around align-middle">
-            <img src="/assets/hostels.png" class="w-2/5 h-2/5 z-10" />
-            <div class="w-full ml-8 p-2 my-auto">
-                <span class="text-2xl font-semibold">About IIT Hyderabad Sustainability</span>
+        <div class="flex flex-col-reverse lg:flex-row w-fit m-8 p-8 justify-around align-middle">
+            <img src="/assets/hostels.png" class="hidden lg:block w-2/5 h-2/5 z-10" />
+            <div class="w-full lg:ml-8 p-2 my-auto">
+                <span class="text-4xl lg:text-2xl font-bold">About IIT Hyderabad Sustainability</span>
+                <img src="/assets/hostels.png" class="block mt-8 lg:mt-0 lg:hidden w-full z-10" />
                 <p class="mt-8 font-light flex flex-col gap-2">
                     <span>
                     IIT Hyderabad is at the forefront of sustainability, addressing climate change through innovative research, practical actions, and capacity building. With a vision to create an eco-friendly campus, IITH integrates cutting-edge technology with impactful initiatives to reduce its environmental footprint and inspire global climate action.
@@ -73,44 +75,52 @@ import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAx
     </section>
     <!-- Targets -->
     <section id="targets">
-        <img src="/assets/hostels2.png" class="w-full mt-12"/>
+        <div class="flex flex-col bg-[url('/assets/hostels2.png')] w-full py-12 lg:py-24 text-white bg-cover mt-12">
+            <span class="text-4xl lg:text-2xl font-bold text-white underline text-center w-full">
+                Targets for Future
+            </span>
+            <p class="w-1/2 text-white text-2xl lg:text-md text-center mx-auto mt-4">
+                IITH has taken several steps to realize its aspirations to play a leadership role in evolving and undertaking climate positive frameworks and actions. To this end, the Institute has established a Climate Action Committee tasked with further developing a holistic framework to shape its short-term and long-term Climate Action Plan along with specified targets and measurable impacts.
+            </p>
+        </div>
     </section>
     <!-- Student Engagement -->
-    <section id="student-led-activities" class="flex flex-col items-center gap-4">
-        <div class="flex w-full p-6 justify-around items-center">
-            <div class="flex flex-col max-w-lg">
-                <div class="text-2xl font-bold mb-4">Student Engagement in Sustainability</div>
-                <ul class="space-y-4">
-                    <li class="flex items-start space-x-3">
-                        <Brush class="text-emerald-600 scale-75"/>
+    <section id="student-led-activities" class="flex flex-col items-center gap-4 m-6">
+        <div class="flex flex-col lg:flex-row w-full lg:p-4 justify-around items-center">
+            <div class="flex flex-col lg:max-w-lg">
+                <div class="text-4xl lg:text-2xl font-bold mb-4 text-center">Student Engagement in Sustainability</div>
+                <img src="/assets/sideImg.png" class="block lg:hidden w-full rounded-lg"/>
+                <ul class="space-y-6 lg:space-y-4 mt-4">
+                    <li class="flex items-start space-x-3 text-3xl lg:text-lg">
+                        <Brush class="text-emerald-600 lg:scale-75"/>
                         <div>
                             <span class="font-bold">Monthly Clean-up Drives</span>
                             <p class="text-gray-600">Regular campus clean-up initiatives led by student volunteers.</p>
                         </div>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <Sprout class="text-emerald-600 scale-75"/>
+                    <li class="flex items-start space-x-3 text-3xl lg:text-lg">
+                        <Sprout class="text-emerald-600 lg:scale-75"/>
                         <div>
                             <span class="font-bold">Plantation Events</span>
                             <p class="text-gray-600">Regular tree plantation drives to enhance campus greenery.</p>
                         </div>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <Bike class="text-emerald-600 scale-75"/>
+                    <li class="flex items-start space-x-3 text-3xl lg:text-lg">
+                        <Bike class="text-emerald-600 lg:scale-75"/>
                         <div>
                             <span class="font-bold">Cycling Culture</span>
                             <p class="text-gray-600">Reimbursement scheme to promote bicycle usage on campus.</p>
                         </div>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <Leaf class="text-emerald-600 scale-75"/>
+                    <li class="flex items-start space-x-3 text-3xl lg:text-lg">
+                        <Leaf class="text-emerald-600 lg:scale-75"/>
                         <div>
                             <span class="font-bold">Prakriti Club</span>
                             <p class="text-gray-600">A club for nature enthusiasts to contribute effortlessly.</p>
                         </div>
                     </li>
-                    <li class="flex items-start space-x-3">
-                        <GraduationCap class="text-emerald-600 scale-75"/>
+                    <li class="flex items-start space-x-3 text-3xl lg:text-lg">
+                        <GraduationCap class="text-emerald-600 lg:scale-75"/>
                         <div>
                             <span class="font-bold">Prayas - The Rural Developing Club</span>
                             <p class="text-gray-600">Focuses on holistic growth and rural community development.</p>
@@ -118,29 +128,32 @@ import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAx
                     </li>
                 </ul>
             </div>
-            <img src="/assets/sideImg.png" class="w-1/3 rounded-lg"/>
+            <img src="/assets/sideImg.png" class="hidden lg:block w-1/3 rounded-lg"/>
         </div>
     </section>
     <!-- Video Highlights -->
     <section id="video-highlights">
-        <span class="text-2xl ml-48 font-bold">Video Highlights of our progress</span>
+        <div class="w-full flex justify-center items-center mt-12 lg:mt-6">
+            <span class="text-4xl lg:text-2xl text-center font-bold">Video Highlights of our progress</span>
+        </div>
     </section>
     <!-- Achievements of IITH -->
-    <div class="flex w-full p-12 justify-center">
-        <img src="/assets/IGH.png" class="w-1/3 rounded-lg shadow-lg" />
-        <div class="flex flex-col w-1/2 pl-12">
-            <h2 class="text-2xl font-bold mb-6 underline">Achievements Of IIT-H</h2>
-            <div class="flex gap-12">
+    <div class="flex flex-col-reverse lg:flex-row w-full p-12 justify-center">
+        <img src="/assets/IGH.png" class="hidden lg:block w-1/3 rounded-lg shadow-lg" />
+        <div class="flex flex-col lg:w-1/2 pl-12">
+            <h2 class="text-4xl lg:text-2xl font-bold mb-6 lg:underline mx-auto">Achievements Of IIT-H</h2>
+            <img src="/assets/IGH.png" class="block lg:hidden rounded-lg shadow-lg" />
+            <div class="flex gap-12 mt-12">
                 <div>
-                    <p class="text-2xl font-bold">30000+</p>
-                    <p class="text-md">
+                    <p class="text-4xl lg:text-2xl font-bold">30000+</p>
+                    <p class="text-2xl lg:text-md">
                         <strong>Trees Planted</strong> <br />
                         Plantation Drive - First Saturday of every month we organize a plantation drive.
                     </p>
                 </div>
                 <div>
-                    <p class="text-2xl font-bold">15+</p>
-                    <p class="text-md">
+                    <p class="text-4xl lg:text-2xl font-bold">15+</p>
+                    <p class="text-2xl lg:text-md">
                         <strong>Years of experience</strong> <br />
                         In upcoming years, we will try to contribute more towards sustainable development.
                     </p>
@@ -154,49 +167,50 @@ import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAx
         <Carousel_news data={news} isImaged={false}/>
     </section>
     <!-- Resources -->
-    <div class="flex flex-col scale-90">
-        <div class="text-3xl text-left font-bold">
-            Resources
-        </div>
-        <div class="flex gap-4 mt-8">
-            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
-                <BookText class="text-emerald-600 mb-2"/>
-                Sustainable Practices 
-                <br>
-                Policy - IITH
+    <div class="hidden lg:block">
+        <div class="flex flex-col scale-90">
+            <div class="text-3xl text-left font-bold">
+                Resources
             </div>
-            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
-                <ChartNoAxesCombined class="text-emerald-600 mb-2"/>
-                Unnat Bharat Abhiyan - IITH
-            </div>
-            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
-                <Clipboard class="text-emerald-600 mb-2"/>
-                Zero Liq. Discharge Plant - IITH    
-            </div>
-            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
-                <Globe class="text-emerald-600 mb-2"/>
-                Climate Change - IITH
+            <div class="flex gap-4 mt-8">
+                <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                    <BookText class="text-emerald-600 mb-2"/>
+                    Sustainable Practices 
+                    <br>
+                    Policy - IITH
+                </div>
+                <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                    <ChartNoAxesCombined class="text-emerald-600 mb-2"/>
+                    Unnat Bharat Abhiyan - IITH
+                </div>
+                <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                    <Clipboard class="text-emerald-600 mb-2"/>
+                    Zero Liq. Discharge Plant - IITH    
+                </div>
+                <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                    <Globe class="text-emerald-600 mb-2"/>
+                    Climate Change - IITH
+                </div>
             </div>
         </div>
     </div>
     <!-- Contact -->
-    <div class="flex flex-col pl-18 mt-12">
-        <h2 class="text-xl font-bold">Contact</h2>
-        <h3 class="text-2xl font-bold mt-1">OFFICE OF SUSTAINABILITY</h3>
+    <div class="flex flex-col lg:pl-18 mt-12 text-center lg:text-left">
+        <h2 class="text-4xl lg:text-xl font-bold">Contact</h2>
+        <h3 class="text-4xl lg:text-2xl font-bold mt-1">OFFICE OF SUSTAINABILITY</h3>
 
-        <div class="mt-4 space-y-3">
-            <div class="flex items-start">
-            <MapPin class="w-5 h-5 mt-1 mr-2" />
-            <p>
-                <strong>Location:</strong> <br />
-                Indian Institute of Technology Hyderabad, Kandi, <br />
-                Sangareddy, Telangana-502284
-            </p>
+        <div class="mt-4 space-y-3 ">
+            <div class="flex justify-center lg:items-start">
+                <MapPin class="w-5 h-5 mt-1 mr-2" />
+                <p class="text-2xl lg:text-lg w-1/2 lg:w-full text-left">
+                    <strong>Location:</strong> <br />
+                    Indian Institute of Technology Hyderabad, Kandi, Sangareddy, Telangana-502284
+                </p>
             </div>
 
-            <div class="flex items-start">
+            <div class="flex justify-center lg:items-start">
             <Mail class="w-5 h-5 mt-1 mr-2" />
-            <p>
+            <p class="text-2xl lg:text-lg w-1/2 lg:w-full text-left">
                 <strong>Email:</strong> <br />
                 <a href="mailto:nodal.qs@iith.ac.in" class="text-blue-600">
                 nodal.qs@iith.ac.in

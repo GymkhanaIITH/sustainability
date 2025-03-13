@@ -3,33 +3,33 @@ import "../styles/global.css";
 import { Globe , Clipboard , ChartNoAxesCombined , BookText } from "lucide-astro";
 ---
 
-<div class="bg-[url('/assets/homeScreen.png')] h-screen w-full bg-cover flex pl-24 items-center">
-    <div class="flex flex-col scale-90">
-        <div class="text-white text-8xl text-left font-bold">
+<div class="bg-[url('/assets/homeScreenMob.png')] lg:bg-[url('/assets/homeScreen.png')] h-screen w-full bg-cover bg-center flex lg:pl-24 items-center">
+    <div class="flex flex-col scale-90 mt-72 lg:mt-0">
+        <div class="text-white text-8xl text-center lg:text-left font-bold">
             SUSTAINABILITY
             <br>
             PRACTICES
         </div>
-        <div class="text-white text-2xl text-left">
+        <div class="text-white text-3xl mt-8 text-center lg:text-left">
             IITH - Inventing & Innovating in Technology for Humanity.
         </div>
-        <div class="flex gap-4 mt-24">
-            <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
-                <BookText class="text-emerald-600 mb-2"/>
+        <div class="grid grid-cols-2 lg:flex gap-4 scale-75 lg:scale-100 mt-24">
+            <div class="bg-white p-8 m-12 lg:m-2 lg:p-4 text-5xl lg:text-lg text-black font-bold rounded-lg items-center aspect-square lg:aspect-auto">
+                <BookText class="text-emerald-600 mb-6 lg:mb-2 size-24 lg:size-8"/>
                 Sustainable Practices 
                 <br>
                 Policy - IITH
             </div>
-            <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
-                <ChartNoAxesCombined class="text-emerald-600 mb-2"/>
+            <div class="bg-white p-8 m-12 lg:m-2 lg:p-4 text-5xl lg:text-lg text-black font-bold rounded-lg items-center aspect-square lg:aspect-auto">
+                <ChartNoAxesCombined class="text-emerald-600 mb-6 lg:mb-2 size-24 lg:size-8"/>
                 Unnat Bharat Abhiyan - IITH
             </div>
-            <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
-                <Clipboard class="text-emerald-600 mb-2"/>
+            <div class="bg-white p-8 m-12 lg:m-2 lg:p-4 text-5xl lg:text-lg text-black font-bold rounded-lg items-center aspect-square lg:aspect-auto">
+                <Clipboard class="text-emerald-600 mb-6 lg:mb-2 size-24 lg:size-8"/>
                 Zero Liq. Discharge Plant - IITH    
             </div>
-            <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
-                <Globe class="text-emerald-600 mb-2"/>
+            <div class="bg-white p-8 m-12 lg:m-2 lg:p-4 text-5xl lg:text-lg text-black font-bold rounded-lg items-center aspect-square lg:aspect-auto">
+                <Globe class="text-emerald-600 mb-6 lg:mb-2 size-24 lg:size-8"/>
                 Climate Change - IITH
             </div>
         </div>

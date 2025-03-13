@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Hamburger from "./Hamburger.jsx";
 ---
 
 <header
@@ -8,8 +9,8 @@ import "../styles/global.css";
   <div class="flex items-center space-x-4">
     <img src="/assets/logo.png" alt="IIT Hyderabad Logo" class="h-12" />
   </div>
-  <nav>
-    <ul class="flex space-x-6 text-sm">
+  <nav class="hidden lg:block">
+    <ul class="flex space-x-4 text-sm">
       <li><a href="/#" class="hover:text-orange-400">Home</a></li>
       <li><a href="/#about" class="hover:text-orange-400">About</a></li>
       <li>
@@ -22,8 +23,7 @@ import "../styles/global.css";
           >Student Led Activities</a>
       </li>
       <li>
-        <a href="/#targets" class="hover:text-orange-400"
-          >Targets for Future</a>
+        <a href="/#targets" class="hover:text-orange-400">Targets for Future</a>
       </li>
       <li>
         <a href="/#video-highlights" class="hover:text-orange-400"
@@ -31,4 +31,7 @@ import "../styles/global.css";
       </li>
     </ul>
   </nav>
+  <div class="block lg:hidden">
+    <Hamburger client:load />
+  </div>
 </header>
