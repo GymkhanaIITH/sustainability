@@ -1,19 +1,26 @@
 ---
 import "keen-slider/keen-slider.min.css";
-const { data = [], isImage = false } = Astro.props;
+const { data = [], isImage = true } = Astro.props;
 ---
 
 <div id="news-carousel" class="keen-slider flex gap-4">
     {data.map((item, index) => (
-        <div class="keen-slider__slide bg-white text-xl max-w-xs md:max-w-sm text-black shadow-xl p-6 font-bold rounded-lg mb-12" key={index}>
-            {isImage && item.imageSrc && (
-                <img src={item.imageSrc} alt={item.title} class="mb-4 rounded-md object-cover w-full h-48"/>
+        <div class="keen-slider__slide bg-white text-xl max-w-xs md:max-w-sm text-black shadow-xl p-6 font-bold rounded-lg mb-12 flex items-center space-x-4" key={index}>
+            {isImage && (
+                <img 
+                    src={'/assets/news_pics/' + item.imagePath} 
+                    onerror="this.src='/assets/news_pics/pic_def.png';" 
+                    alt={item.title} 
+                    class="rounded-md object-cover w-24 h-24"
+                />
             )}
-            <h3 class="text-lg font-semibold">{item.title}</h3>
-            <p class="font-light text-sm mb-2">{item.description}</p>
-            <a href={item.readMoreHref} class="text-emerald-600 font-light text-sm">
-                Read More ->
-            </a>
+            <div>
+                <h3 class="text-lg font-semibold">{item.title}</h3>
+                <p class="font-light text-sm mb-2">{item.description}</p>
+                <a href={item.readMoreHref} class="text-emerald-600 font-light text-sm">
+                    Read More ->
+                </a>
+            </div>
         </div>
     ))}
 </div>
