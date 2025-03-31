@@ -3,42 +3,42 @@
         "timestamp":"",
         "title": "IIT Hyderabad Half marathon",
         "description": "The motivation for this event is to promote fitness, teamwork, and community spirit by bringing together IITH and the surrounding local community.",
-        "readMoreHref": "",
-        "imagePath": ""
+        "readMoreHref": "https://pr.iith.ac.in/pressrelease/Half%20Marathon.pdf",
+        "imagePath": "pic1.png"
     },
     {
         "timestamp":"",
         "title": "National Wellbeing Conclave",
         "description": "IIT Hyderabad hosted India's first 'National Wellbeing Conclave' for colleges and universities, supported by the central education ministry",
-        "readMoreHref": "",
-        "imagePath":""
+        "readMoreHref": "https://timesofindia.indiatimes.com/city/hyderabad/india-hosts-first-national-wellbeing-conclave-for-higher-education-at-iit-hyderabad/articleshow/115123578.cms",
+        "imagePath":"pic2.png"
     },
     {
         "timestamp":"",
         "title": "Plantation drive with ICICI Foundation",
         "description": "12000 saplings of 38 native plant species planted in Miyawaki Method",
         "readMoreHref": "",
-        "imagePath":""
+        "imagePath":"pic1.png"
     },
     {
         "timestamp":"",
         "title": "Plantation drive with ICICI Foundation",
         "description": "12000 saplings of 38 native plant species planted in Miyawaki Method",
         "readMoreHref": "",
-        "imagePath":""
+        "imagePath":"pic2.png"
     },
     {
         "timestamp":"",
         "title": "Plantation drive with ICICI Foundation",
         "description": "12000 saplings of 38 native plant species planted in Miyawaki Method",
         "readMoreHref": "",
-        "imagePath":""
+        "imagePath":"pic1.png"
     },
     {
         "timestamp":"",
         "title": "Plantation drive with ICICI Foundation",
         "description": "12000 saplings of 38 native plant species planted in Miyawaki Method",
         "readMoreHref": "",
-        "imagePath":""
+        "imagePath":"pic2.png"
     }
 ]

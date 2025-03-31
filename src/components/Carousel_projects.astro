@@ -6,8 +6,13 @@ const { data = [], isImage = false } = Astro.props;
 <div id="projects-carousel" class="keen-slider flex gap-4">
     {data.map((item, index) => (
         <div class="keen-slider__slide bg-white text-xl max-w-xs md:max-w-sm text-black shadow-xl p-6 font-bold rounded-lg mb-12" key={index}>
-            {isImage && item.imageSrc && (
-                <img src={item.imageSrc} alt={item.title} class="mb-4 rounded-md object-cover w-full h-48"/>
+            { (
+                <img 
+                    src={'/assets/project_pics/' + item.smallImgsrc} 
+                    onerror="this.src='/assets/project_pics/pic_def.png';" 
+                    alt={item.title} 
+                    class="mb-4 rounded-md object-cover w-full h-48"
+                />
             )}
             <h3 class="text-lg font-semibold">{item.title}</h3>
             <p class="font-light text-sm mb-2">{item.description}</p>
