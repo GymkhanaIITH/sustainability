@@ -14,6 +14,7 @@ import news from "../configs/news.json";
 import videos from "../configs/videos.json";
 import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAxesCombined , BookText, Mail, MapPin } from "lucide-astro";
 import CarouselVideos from "../components/Carousel_videos.astro";
+import GridVideos from "../components/Grid_videos.astro";
 ---
 
 <Navbar />
@@ -136,9 +137,10 @@ import CarouselVideos from "../components/Carousel_videos.astro";
     </section>
 
     <!-- Video Highlights -->
-    <section id="videos" class="w-full flex flex-col items-end mx-auto gap-4">
-        <span class="text-2xl text-center font-bold">Video Highlights</span>
-        <Carousel_videos data={videos} isImaged={true}/>
+    <section id="videos" class="w-[80%] flex flex-col items-centre mx-auto my-10 gap-4">
+        <span class="w-full flex justify-center text-2xl font-bold gap-4 mx-auto"> <hr class="w-40 my-auto" /> Video Highlights of Our Progress <hr class="w-40 my-auto" /> </span>
+        <!-- <Carousel_videos data={videos} isImaged={true}/> -->
+        <GridVideos videos={videos} />
     </section>
 
     <!-- Achievements of IITH -->
