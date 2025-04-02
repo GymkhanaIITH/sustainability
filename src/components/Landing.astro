@@ -1,13 +1,15 @@
 ---
 import "../styles/global.css";
-import { Globe , Clipboard , ChartNoAxesCombined , BookText } from "lucide-astro";
+import { Globe, Clipboard, ChartNoAxesCombined, BookText } from "lucide-astro";
 ---
 
-<div class="bg-[url('/assets/homeScreenMob.png')] lg:bg-[url('/assets/homeScreen.png')] h-screen w-full bg-cover bg-center flex lg:pl-24 items-center">
-    <div class="flex flex-col scale-90 mt-72 lg:mt-0">
+<div
+    class="bg-[url('/assets/homeScreenMob.png')] lg:bg-[url('/assets/homeScreen.png')] h-screen w-full bg-cover bg-center flex lg:pl-24 items-center"
+>
+    <div id="landing" class="flex flex-col scale-90 mt-72 lg:mt-0">
         <div class="text-white text-8xl text-center lg:text-left font-bold">
             SUSTAINABILITY
-            <br>
+            <br />
             PRACTICES
         </div>
         <div class="text-white text-3xl mt-8 text-center lg:text-left">
@@ -15,29 +17,49 @@ import { Globe , Clipboard , ChartNoAxesCombined , BookText } from "lucide-astro
         </div>
         <div class="flex gap-4 mt-24">
             <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
-                <a href="https://sustainability.iith.ac.in/assets/img/sus%20policy.pdf" target="_blank" rel="noopener noreferrer" class="block">
-                    <BookText class="text-emerald-600 mb-2"/>
-                    Sustainable Practices 
-                    <br>
+                <a
+                    href="https://sustainability.iith.ac.in/assets/img/sus%20policy.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block"
+                >
+                    <BookText class="text-emerald-600 mb-2" />
+                    Sustainable Practices
+                    <br />
                     Policy - IITH
                 </a>
             </div>
             <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
-                <a href="https://people.iith.ac.in/uba/" target="_blank" rel="noopener noreferrer" class="block">
-                    <ChartNoAxesCombined class="text-emerald-600 mb-2"/>
-                Unnat Bharat Abhiyan - IITH
+                <a
+                    href="https://people.iith.ac.in/uba/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block"
+                >
+                    <ChartNoAxesCombined class="text-emerald-600 mb-2" />
+                    Unnat Bharat Abhiyan - IITH
                 </a>
             </div>
             <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
-                <a href="https://sustainability.iith.ac.in/zeroliq.html" target="_blank" rel="noopener noreferrer" class="block">
-                <Clipboard class="text-emerald-600 mb-2"/>
-                Zero Liq. Discharge Plant - IITH    
+                <a
+                    href="https://sustainability.iith.ac.in/zeroliq.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block"
+                >
+                    <Clipboard class="text-emerald-600 mb-2" />
+                    Zero Liq. Discharge Plant - IITH
                 </a>
             </div>
             <div class="bg-white p-4 text-lg text-black font-bold rounded-lg">
-                <a href="https://cc.iith.ac.in/" target="_blank" rel="noopener noreferrer" class="block">
-                    <Globe class="text-emerald-600 mb-2"/>
-                Climate Change - IITH
+                <a
+                    href="https://cc.iith.ac.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block"
+                >
+                    <Globe class="text-emerald-600 mb-2" />
+                    Climate Change - IITH
                 </a>
             </div>
         </div>

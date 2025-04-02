@@ -1,0 +1,46 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import news from "../../configs/news_content.json";
+
+export async function getStaticPaths() {
+  return news.map((item) => ({
+    params: { id: item.readMoreHref.split("/").pop() },
+  }));
+}
+
+const { id } = Astro.params;
+
+const news_content = news.find(
+  (item) => item.readMoreHref.split("/").pop() === id
+);
+
+if (!news_content) {
+  throw new Error(`Initiative not found for ID: ${id}`);
+}
+---
+
+<main class="flex flex-col min-h-screen">
+  <Navbar />
+
+  <div class="flex flex-row justify-center flex-grow m-12 gap-8">
+    <!-- Left side: Image -->
+    <div class="w-1/2 flex justify-center items-center">
+      <img 
+        src={'/assets/news_pics/' + news_content.imagePath} 
+        alt={'/assets/news/pic_def.png'} 
+        class="w-full max-w-md h-auto rounded-lg shadow-md"
+      />
+    </div>
+
+    <!-- Right side: Text -->
+    <div class="flex flex-col text-left w-1/2 gap-4">
+      <h2 class="text-xl font-semibold underline">{news_content.title}</h2>
+      <div class="text-md font-light">
+        { news_content.content}
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</main>

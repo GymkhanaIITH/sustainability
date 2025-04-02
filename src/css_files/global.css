@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Heavitas";
+  src: url("/fonts/Heavitas.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,6 +16,9 @@ body {
   scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
+#landing {
+  font-family: "Heavitas", sans-serif; /* ✅ Apply Heavitas to #landing */
+}
 .navbar {
   background: #333;
   padding: 15px;
@@ -46,8 +56,4 @@ button {
   justify-content: center;
   font-size: 2rem;
   border-bottom: 2px solid #ccc;
-}
-
-html {
-  scroll-behavior: smooth; /* Enables smooth scrolling */
 }

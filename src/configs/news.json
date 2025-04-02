@@ -22,23 +22,23 @@
     },
     {
         "timestamp":"",
-        "title": "Plantation drive with ICICI Foundation",
-        "description": "12000 saplings of 38 native plant species planted in Miyawaki Method",
-        "readMoreHref": "",
-        "imagePath":"pic2.png"
+        "title": "IITH workshop on critical minerals",
+        "description": "The workshop brings together researchers, academicians, and industry leaders from India and Australia.",
+        "readMoreHref": "https://www.newindianexpress.com/states/telangana/2025/Jan/04/iit-hyderabad-hosts-workshop-on-critical-minerals",
+        "imagePath":"pic4.png"
     },
     {
         "timestamp":"",
-        "title": "Plantation drive with ICICI Foundation",
+        "title": "World Tour of Solar Butterfly at IITH",
         "description": "12000 saplings of 38 native plant species planted in Miyawaki Method",
-        "readMoreHref": "",
-        "imagePath":"pic1.png"
+        "readMoreHref": "/news/solar-butterfly",
+        "imagePath":"pic5.jpg"
     },
     {
         "timestamp":"",
-        "title": "Plantation drive with ICICI Foundation",
-        "description": "12000 saplings of 38 native plant species planted in Miyawaki Method",
-        "readMoreHref": "",
-        "imagePath":"pic2.png"
+        "title": "Prayas RDC - IITH",
+        "description": "",
+        "readMoreHref": "/news/prayas-rdc",
+        "imagePath":"pic6.png"
     }
 ]
