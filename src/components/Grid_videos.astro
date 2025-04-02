@@ -1,0 +1,42 @@
+---
+const { videos = [] } = Astro.props;
+---
+
+<section class="p-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Main Large Video -->
+        <div class="md:col-span-2 row-span-2">
+            <video
+                controls
+                class="w-full aspect-video rounded-md shadow-lg"
+                autoplay
+                muted
+                loop
+            >
+                <source
+                    src="/assets/vids/IITH SDGs Contribution.mp4"
+                    type="video/mp4"
+                />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Other Videos (YouTube or External Links) -->
+        {
+            videos.map((item, index) => (
+                <div class="col-span-1">
+                    {item.videoUrl && (
+                        <div class="w-full aspect-video rounded-md overflow-hidden shadow-md">
+                            <iframe
+                                class="w-full h-full"
+                                src={item.videoUrl}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            />
+                        </div>
+                    )}
+                </div>
+            ))
+        }
+    </div>
+</section>
