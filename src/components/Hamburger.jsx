@@ -35,6 +35,11 @@ const Navbar = () => {
                 </a>
             </li>
             <li>
+                <a href="https://www.iith.ac.in/about/iith_policies/" className="hover:text-orange-400">
+                Policies
+                </a>
+            </li>
+            <li>
                 <a href="/#initiatives" className="hover:text-orange-400">
                 Initiatives
                 </a>
