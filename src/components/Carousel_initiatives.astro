@@ -3,7 +3,7 @@ import "keen-slider/keen-slider.min.css";
 const { data = [] } = Astro.props;
 ---
 
-<div id="carousel" class="keen-slider w-full flex gap-4">
+<div id="carousel" class="keen-slider">
   {data.map((item, index) => (
     <div
       key={index}
@@ -18,27 +18,75 @@ const { data = [] } = Astro.props;
   ))}
 </div>
 
-<script>
-  import KeenSlider from 'keen-slider';
 
-  const slider = new KeenSlider('#carousel', {
-    slides: {
-      perView: 1.25,
-      spacing: 30,
-    },
-    breakpoints: {
-      '(min-width: 768px)': {
-        slides: {
-          perView: 2,
-          spacing: 20,
+
+<script>
+  import KeenSlider from "keen-slider";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = new KeenSlider("#carousel", {
+      loop: true,
+      mode: "free-snap",   
+      rtl: true, 
+      renderMode: "performance",
+
+      defaultAnimation:{
+        duration: 1000,
+      },
+
+      slides: {
+        perView: 1.2,
+        spacing: 20,
+      },
+
+      breakpoints: {
+        "(min-width: 768px)": {
+          slides: {
+            perView: 2.2,
+            spacing: 20,
+          },
+        },
+        "(min-width: 1024px)": {
+          slides: {
+            perView: 3,
+            spacing: 20,
+          },
         },
       },
-      '(min-width: 1024px)': {
-        slides: {
-          perView: 3,
-          spacing: 20,
-        },
+
+      created(s) {
+        let timeout;
+        let mouseOver = false;
+
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            s.next();
+          }, 1500);
+        }
+
+        // ✅ Start auto-rotation immediately — no nested s.on("created") wrapper
+        nextTimeout();
+
+        s.container.addEventListener("mouseover", () => {
+          mouseOver = true;
+          clearNextTimeout();
+        });
+
+        s.container.addEventListener("mouseout", () => {
+          mouseOver = false;
+          nextTimeout();
+        });
+
+        s.on("dragStarted", clearNextTimeout);
+        s.on("animationEnded", nextTimeout);
+        s.on("updated", nextTimeout);
       },
-    },
+    });
   });
 </script>
