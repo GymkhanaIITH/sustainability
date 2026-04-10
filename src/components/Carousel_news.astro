@@ -3,7 +3,8 @@ import "keen-slider/keen-slider.min.css";
 const { data = [], isImage = true } = Astro.props;
 ---
 
-<div id="news-carousel" class="keen-slider flex gap-4">
+<!-- <div id="news-carousel" class="keen-slider flex gap-4"> -->
+    <div id="news-carousel" class="keen-slider">
     {data.map((item, index) => (
         <div class="keen-slider__slide bg-white text-xl max-w-xs md:max-w-sm text-black shadow-xl p-6 font-bold rounded-lg mb-12 flex items-center space-x-4" key={index}>
             {isImage && (
@@ -18,17 +19,19 @@ const { data = [], isImage = true } = Astro.props;
                 <h3 class="text-lg font-semibold">{item.title}</h3>
                 <p class="font-light text-sm mb-2">{item.description}</p>
                 <a href={item.readMoreHref} class="text-emerald-600 font-light text-sm">
-                    Read More ->
+                    Read More 
                 </a>
             </div>
         </div>
     ))}
 </div>
-
+<!-- 
 <script>
     import KeenSlider from 'keen-slider';
 
     const slider = new KeenSlider('#news-carousel', {
+        loop: true,
+        renderMode: "performance",
         slides: {
             perView: 1.25,
             spacing: 30,
@@ -47,5 +50,111 @@ const { data = [], isImage = true } = Astro.props;
                 },
             },
         },
+          created(s) {
+            // ⭐ Auto move like Zomato
+            let timeout;
+            let mouseOver = false;
+
+            function clearNextTimeout() {
+                clearTimeout(timeout);
+            }
+
+            function nextTimeout() {
+                clearTimeout(timeout);
+                if (mouseOver) return;
+
+                timeout = setTimeout(() => {
+                    s.next();
+                }, 1000); // speed (change if needed)
+            }
+
+            s.on("created", () => {
+                s.container.addEventListener("mouseover", () => {
+                    mouseOver = true;
+                    clearNextTimeout();
+                });
+
+                s.container.addEventListener("mouseout", () => {
+                    mouseOver = false;
+                    nextTimeout();
+                });
+
+                nextTimeout();
+            });
+
+            s.on("dragStarted", clearNextTimeout);
+            s.on("animationEnded", nextTimeout);
+            s.on("updated", nextTimeout);
+        },
     });
+</script> -->
+
+<script>
+  import KeenSlider from "keen-slider";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = new KeenSlider("#news-carousel", {
+      loop: true,
+      mode: "free-snap",   
+      renderMode: "performance",
+
+      defaultAnimation:{
+        duration: 1000,
+      },
+
+      slides: {
+        perView: 1.2,
+        spacing: 20,
+      },
+
+      breakpoints: {
+        "(min-width: 768px)": {
+          slides: {
+            perView: 2.2,
+            spacing: 20,
+          },
+        },
+        "(min-width: 1024px)": {
+          slides: {
+            perView: 3,
+            spacing: 20,
+          },
+        },
+      },
+
+      created(s) {
+        let timeout;
+        let mouseOver = false;
+
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            s.next();
+          }, 1500);
+        }
+
+        // ✅ Start auto-rotation immediately — no nested s.on("created") wrapper
+        nextTimeout();
+
+        s.container.addEventListener("mouseover", () => {
+          mouseOver = true;
+          clearNextTimeout();
+        });
+
+        s.container.addEventListener("mouseout", () => {
+          mouseOver = false;
+          nextTimeout();
+        });
+
+        s.on("dragStarted", clearNextTimeout);
+        s.on("animationEnded", nextTimeout);
+        s.on("updated", nextTimeout);
+      },
+    });
+  });
 </script>
