@@ -12,7 +12,7 @@ import initiatives from "../configs/initiatives.json";
 import projects from "../configs/projects.json";
 import news from "../configs/news.json";
 import videos from "../configs/videos.json";
-import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAxesCombined , BookText, Mail, MapPin } from "lucide-astro";
+import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAxesCombined , BookText, Mail, MapPin, Download } from "lucide-astro";
 import CarouselVideos from "../components/Carousel_videos.astro";
 import GridVideos from "../components/Grid_videos.astro";
 ---
@@ -202,6 +202,17 @@ import GridVideos from "../components/Grid_videos.astro";
                 <a href="https://cc.iith.ac.in/" target="_blank" rel="noopener noreferrer" class="block">
                     <Globe class="text-emerald-600 mb-2"/>
                 Climate Change - IITH
+                </a>
+            </div>
+            <div class="bg-white p-4 shadow-2xl text-lg text-black font-bold rounded-lg">
+                <a
+                    href="/assets/files_data/Sustainability at IITH.pptx" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block"
+                >
+                    <Download class="text-emerald-600 mb-2" />
+                    Sustainability At IITH
                 </a>
             </div>
         </div>

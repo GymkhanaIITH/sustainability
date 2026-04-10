@@ -3,7 +3,7 @@ import "keen-slider/keen-slider.min.css";
 const { data = [], isImage = false } = Astro.props;
 ---
 
-<div id="projects-carousel" class="keen-slider flex gap-4">
+<div id="projects-carousel" class="keen-slider">
     {data.map((item, index) => (
         <div class="keen-slider__slide bg-white text-xl max-w-xs md:max-w-sm text-black shadow-xl p-6 font-bold rounded-lg mb-12" key={index}>
             { (
@@ -24,26 +24,71 @@ const { data = [], isImage = false } = Astro.props;
 </div>
 
 <script>
-    import KeenSlider from 'keen-slider';
+  import KeenSlider from "keen-slider";
 
-    const slider = new KeenSlider('#projects-carousel', {
-        slides: {
-            perView: 1.25,
-            spacing: 30,
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = new KeenSlider("#projects-carousel", {
+      loop: true,
+      mode: "free-snap",   
+      renderMode: "performance",
+
+      defaultAnimation:{
+        duration: 1000,
+      },
+
+      slides: {
+        perView: 1.2,
+        spacing: 20,
+      },
+
+      breakpoints: {
+        "(min-width: 768px)": {
+          slides: {
+            perView: 2.2,
+            spacing: 20,
+          },
         },
-        breakpoints: {
-            '(min-width: 768px)': {
-                slides: {
-                    perView: 2.5,
-                    spacing: 20,
-                },
-            },
-            '(min-width: 1024px)': {
-                slides: {
-                    perView: 3.5,
-                    spacing: 20,
-                },
-            },
+        "(min-width: 1024px)": {
+          slides: {
+            perView: 3,
+            spacing: 20,
+          },
         },
+      },
+
+      created(s) {
+        let timeout;
+        let mouseOver = false;
+
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            s.next();
+          }, 1500);
+        }
+
+        // ✅ Start auto-rotation immediately — no nested s.on("created") wrapper
+        nextTimeout();
+
+        s.container.addEventListener("mouseover", () => {
+          mouseOver = true;
+          clearNextTimeout();
+        });
+
+        s.container.addEventListener("mouseout", () => {
+          mouseOver = false;
+          nextTimeout();
+        });
+
+        s.on("dragStarted", clearNextTimeout);
+        s.on("animationEnded", nextTimeout);
+        s.on("updated", nextTimeout);
+      },
     });
+  });
 </script>
