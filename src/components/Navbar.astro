@@ -14,21 +14,17 @@ import Hamburger from "./Hamburger.jsx";
       <li><a href="/#" class="hover:text-orange-400">Home</a></li>
       <li><a href="/#about" class="hover:text-orange-400">About</a></li>
       <li><a href="https://www.iith.ac.in/about/iith_policies/" class="hover:text-orange-400">Policies</a></li>
-      <li>
-        <a href="/#initiatives" class="hover:text-orange-400">Initiatives</a>
-      </li>
+      <li><a href="/#initiatives" class="hover:text-orange-400">Initiatives</a></li>
       <li><a href="/#projects" class="hover:text-orange-400">Projects</a></li>
       <li><a href="/#events" class="hover:text-orange-400">Events</a></li>
+      <li><a href="/#student-led-activities" class="hover:text-orange-400">Student Led Activities</a></li>
+      <li><a href="/#targets" class="hover:text-orange-400">Targets for Future</a></li>
+      <li><a href="/#video-highlights" class="hover:text-orange-400">Video Highlights</a></li>
       <li>
-        <a href="/#student-led-activities" class="hover:text-orange-400"
-          >Student Led Activities</a>
-      </li>
-      <li>
-        <a href="/#targets" class="hover:text-orange-400">Targets for Future</a>
-      </li>
-      <li>
-        <a href="/#video-highlights" class="hover:text-orange-400"
-          >Video Highlights</a>
+        <!-- Animated sustainability training link -->
+        <a href="/sustainability-training" class="sustainability-link">
+  Sustainability Training
+</a>
       </li>
     </ul>
   </nav>
@@ -36,3 +32,28 @@ import Hamburger from "./Hamburger.jsx";
     <Hamburger client:load />
   </div>
 </header>
+
+<style>
+  .sustainability-link {
+    color: #22c55e;
+    font-weight: 600;
+    animation: pulseText 1.5s ease-in-out infinite;
+    display: inline-block;
+  }
+
+  .sustainability-link:hover {
+    color: #16a34a;
+  }
+
+  @keyframes pulseText {
+    0%, 100% {
+      transform: scale(1);
+      color: #22c55e;
+    }
+    50% {
+      transform: scale(1.18);
+      color: #4ade80;
+      text-shadow: 0 0 8px #22c55e, 0 0 16px #4ade80;
+    }
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import { Download, Trees } from "lucide-astro";
+---
+
+<Navbar />
+
+<main class="min-h-screen bg-white flex flex-col items-center px-6 py-16">
+
+  <!-- Header -->
+  <div class="text-center max-w-3xl mb-12">
+    <h1 class="text-4xl font-bold text-emerald-600 mb-4">Sustainability Training</h1>
+    <p class="text-gray-500 text-lg">Empowering our community with knowledge for a greener future</p>
+  </div>
+
+  <!-- Info Sections -->
+  <div class="max-w-3xl w-full flex flex-col gap-10 text-gray-700">
+
+    <section class="flex flex-col gap-2">
+  <div class="flex items-center gap-2">
+    <Trees size={28} color="#15803d" />
+    <h2 class="text-2xl font-semibold text-emerald-700">Why Sustainability Training?</h2>
+  </div>
+      <p class="font-light leading-relaxed">
+        At IIT Hyderabad, we believe that education is the foundation of lasting change. 
+        Our sustainability training programs are designed to equip students, faculty, and staff 
+        with the awareness, skills, and tools needed to make environmentally responsible decisions 
+        both on campus and beyond.
+      </p>
+    </section>
+
+    <section class="flex flex-col gap-2">
+  <div class="flex items-center gap-2">
+    <Trees size={28} color="#15803d" />
+    <h2 class="text-2xl font-semibold text-emerald-700">What the Training Covers</h2>
+  </div>
+      <ul class="list-disc list-inside font-light leading-relaxed space-y-2">
+        <li>Introduction to the UN's 17 Sustainable Development Goals (SDGs)</li>
+        <li>IITH's climate action framework and sustainability policy</li>
+        <li>Energy conservation and renewable energy practices</li>
+        <li>Waste management, composting, and zero-waste strategies</li>
+        <li>Water conservation and recycling initiatives</li>
+        <li>Green campus infrastructure and biodiversity</li>
+        <li>Student-led sustainability programs and how to get involved</li>
+      </ul>
+    </section>
+
+       <section class="flex flex-col gap-2">
+  <div class="flex items-center gap-2">
+    <Trees size={28} color="#15803d" />
+    <h2 class="text-2xl font-semibold text-emerald-700">Who Is It For?</h2>
+  </div>
+        This training is open to all members of the IITH community incoming students, 
+        research scholars, faculty, and administrative staff. It is also shared with 
+        partner institutions and the broader public as part of IITH's outreach mission.
+      </p>
+    </section>
+
+    <section class="flex flex-col gap-2">
+  <div class="flex items-center gap-2">
+    <Trees size={28} color="#15803d" />
+    <h2 class="text-2xl font-semibold text-emerald-700">Our Commitment</h2>
+  </div>
+        IITH is committed to integrating sustainability into every aspect of institutional life. 
+        Through the School for Sustainable Science and Technology and the Climate Action Committee, 
+        we continuously develop programs that inspire action and measure real-world impact.
+      </p>
+    </section>
+
+  </div>
+
+  <!-- Download Button -->
+  <div class="mt-16 mb-8 flex flex-col items-center gap-3">
+    <p class="text-gray-400 text-sm italic">Download our full training presentation below</p>
+    <a 
+      href="/assets/files_data/Sustainability at IITH.pptx"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-200"
+    >
+      <Download size={20} />
+      Sustainability At IITH
+    </a>
+  </div>
+
+</main>
+
+<Footer />
