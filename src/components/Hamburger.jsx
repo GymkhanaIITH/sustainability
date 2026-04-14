@@ -68,6 +68,14 @@ const Navbar = () => {
                 </a>
             </li>
             <li>
+                <a
+                href="/#iith-newsletter"
+                className="hover:text-orange-400"
+                >
+                IITH Newsletter
+                </a>
+            </li>
+            <li>
                 <a href="/#video-highlights" className="hover:text-orange-400">
                 Video Highlights
                 </a>

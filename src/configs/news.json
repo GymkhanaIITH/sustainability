@@ -40,5 +40,12 @@
         "description": "",
         "readMoreHref": "/news/prayas-rdc",
         "imagePath":"pic6.png"
+    },
+    {
+        "timestamp":"",
+        "title": "IITH sets up waste management system on campus",
+        "description": "",
+        "readMoreHref": "https://www.thehindu.com/news/cities/Hyderabad/iith-sets-up-waste-management-system-on-campus/article35608665.ece",
+        "imagePath":"Bio-digestor.webp"
     }
 ]

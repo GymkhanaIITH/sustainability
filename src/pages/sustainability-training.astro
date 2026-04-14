@@ -2,7 +2,8 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-import { Download, Trees } from "lucide-astro";
+import { Download, Trees, ExternalLink } from "lucide-astro";
+
 ---
 
 <Navbar />
@@ -25,7 +26,7 @@ import { Download, Trees } from "lucide-astro";
   </div>
       <p class="font-light leading-relaxed">
         At IIT Hyderabad, we believe that education is the foundation of lasting change. 
-        Our sustainability training programs are designed to equip students, faculty, and staff 
+        Our sustainability training programs is designed to equip students, faculty, and staff 
         with the awareness, skills, and tools needed to make environmentally responsible decisions 
         both on campus and beyond.
       </p>
@@ -72,7 +73,7 @@ import { Download, Trees } from "lucide-astro";
   </div>
 
   <!-- Download Button -->
-  <div class="mt-16 mb-8 flex flex-col items-center gap-3">
+  <!-- <div class="mt-16 mb-8 flex flex-col items-center gap-3">
     <p class="text-gray-400 text-sm italic">Download our full training presentation below</p>
     <a 
       href="/assets/files_data/Sustainability at IITH.pptx"
@@ -83,7 +84,23 @@ import { Download, Trees } from "lucide-astro";
       <Download size={20} />
       Sustainability At IITH
     </a>
-  </div>
+  </div> -->
+
+  <div class="mt-16 mb-8 flex flex-col items-center gap-3">
+  <p class="text-gray-400 text-sm italic">
+    View our full training presentation below
+  </p>
+
+  <a 
+    href="https://docs.google.com/presentation/d/189ujwU3_nb3gyd-SmCpwUelcc90A93AbUiknB4D10GA/view"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-200"
+  >
+    <Download size={20} />
+    Sustainability Presentation
+  </a>
+</div>
 
 </main>
 

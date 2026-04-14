@@ -3,7 +3,7 @@ import "keen-slider/keen-slider.min.css";
 const { data = [], isImage = true } = Astro.props;
 ---
 
-<!-- <div id="news-carousel" class="keen-slider flex gap-4"> -->
+
     <div id="news-carousel" class="keen-slider">
     {data.map((item, index) => (
         <div class="keen-slider__slide bg-white text-xl max-w-xs md:max-w-sm text-black shadow-xl p-6 font-bold rounded-lg mb-12 flex items-center space-x-4" key={index}>

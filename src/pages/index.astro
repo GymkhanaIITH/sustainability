@@ -15,6 +15,9 @@ import videos from "../configs/videos.json";
 import { Bike, Brush, GraduationCap, Leaf, Sprout, Globe , Clipboard , ChartNoAxesCombined , BookText, Mail, MapPin, Download } from "lucide-astro";
 import CarouselVideos from "../components/Carousel_videos.astro";
 import GridVideos from "../components/Grid_videos.astro";
+import Carousel_newsletter from "../components/Carousel_newsletter.astro";
+import newsletter from "../configs/newsletter.json";
+
 ---
 
 <Navbar />
@@ -56,7 +59,7 @@ import GridVideos from "../components/Grid_videos.astro";
                     </span><span>
                     Recognized for its efforts, IITH received the Haritha Haram Award in 2022, presented by Shri K T Rama Rao, Honorable Minister of Telangana, for its commitment to green practices. Strengthening its focus on sustainability, IITH partnered with Greenko to establish the School for Sustainable Science and Technology, advancing research in renewable energy, waste management, and environmental resilience.
                     </span><span>
-                    On campus, sustainability is embedded in daily operations. The 1 MW solar power plant, radiant cooling system, and zero waste policy demonstrate IITH’s dedication to eco-friendly infrastructure. Initiatives like biodigesters, composting, and wastewater recycling ensure efficient resource management.
+                    On campus, sustainability is embedded in daily operations. The 4.2 MW solar power plant, radiant cooling system, and zero waste policy demonstrate IITHs dedication to eco-friendly infrastructure. Initiatives like biodigesters, composting, and wastewater recycling ensure efficient resource management.
                     </span><span>
                     Students play a vital role in sustainability, participating in clean-up drives, plantation activities, and cycling promotion programs. These efforts cultivate a culture of environmental responsibility.
                     </span><span>
@@ -69,7 +72,7 @@ import GridVideos from "../components/Grid_videos.astro";
 
     <!-- Our Sustainability Initiatives -->
     <section id="initiatives" class="w-[93%] flex flex-col items-center gap-4 mx-auto">
-        <span class="text-2xl text-center font-bold">Our Sustainability Initiatives</span>
+        <span class="text-2xl text-center font-bold" >Our Sustainability Initiatives</span>
         <Carousel_initatives data={initiatives} isImaged={false}/>
     </section>
     <!-- Featured Projects -->
@@ -88,6 +91,13 @@ import GridVideos from "../components/Grid_videos.astro";
             </p>
         </div>
     </section>
+
+    <!-- iith newsletter -->
+     <section id="iith-newsletter" class="w-full flex flex-col items-center gap-4 mx-auto">
+        <span class="text-2xl text-center font-bold" style="margin-top: 60px;">IITH Newsletter</span>
+        <Carousel_newsletter data={newsletter} isImaged={true}/>
+    </section>
+
     <!-- Student Engagement -->
     <section id="student-led-activities" class="flex flex-col items-center gap-4 m-6">
         <div class="flex flex-col lg:flex-row w-full lg:p-4 justify-around items-center">
