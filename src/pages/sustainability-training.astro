@@ -2,7 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-import { Download, Trees, ExternalLink } from "lucide-astro";
+import { Download, Trees, ExternalLink, Newspaper } from "lucide-astro";
 
 ---
 
@@ -99,6 +99,22 @@ import { Download, Trees, ExternalLink } from "lucide-astro";
   >
     <Download size={20} />
     Sustainability Presentation
+  </a>
+</div>
+
+ <div class=" mb-8 flex flex-col items-center gap-3">
+  <p class="text-orange-400 text-sm italic">
+    After going through the presentation, please perform a self-assessment on your sustainability awareness.
+  </p>
+
+  <a 
+    href="https://moodle.cse.iith.ac.in/moodle/mod/quiz/view.php?id=1077"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex items-center gap-2 bg-blue-400 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-200"
+  >
+    <Newspaper size={20} />
+    Sustainability Assessment
   </a>
 </div>
 
