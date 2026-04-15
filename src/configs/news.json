@@ -2,44 +2,44 @@
     {
         "timestamp":"",
         "title": "IIT Hyderabad Half marathon",
-        "description": "The motivation for this event is to promote fitness, teamwork, and community spirit by bringing together IITH and the surrounding local community.",
+        "description": "The motivation for this event is to promote fitness, teamwork, and community spirit by bringing together IITH...",
         "readMoreHref": "https://www.iithydrunnersclub.com/",
         "imagePath": "half_marathon.jpg"
     },
     {
         "timestamp":"",
         "title": "National Wellbeing Conclave",
-        "description": "IIT Hyderabad hosted India's first 'National Wellbeing Conclave' for colleges and universities, supported by the central education ministry",
+        "description": "IIT Hyderabad hosted India's first 'National Wellbeing Conclave' for colleges and universities, supported by the central education ministry...",
         "readMoreHref": "https://timesofindia.indiatimes.com/city/hyderabad/india-hosts-first-national-wellbeing-conclave-for-higher-education-at-iit-hyderabad/articleshow/115123578.cms",
         "imagePath":"pic2.png"
     },
     {
         "timestamp":"",
         "title": "Plantation drive",
-        "description": "NSS IITH organizes the Plantation drive most frequently, and most of the students participate actively in this activity cheerfully.",
+        "description": "NSS IITH organizes the Plantation drive most frequently, and most of the students participate actively in this activity cheerfully...",
         "readMoreHref": "https://nss.iith.ac.in/events/plantation-drive.html",
         "imagePath":"plantationDrive.png"
     },
     {
         "timestamp":"",
         "title": "IITH workshop on critical minerals",
-        "description": "The workshop brings together researchers, academicians, and industry leaders from India and Australia.",
+        "description": "The workshop brings together researchers, academicians, and industry leaders from India and Australia...",
         "readMoreHref": "https://www.newindianexpress.com/states/telangana/2025/Jan/04/iit-hyderabad-hosts-workshop-on-critical-minerals",
         "imagePath":"pic4.png"
     },
     {
         "timestamp":"",
         "title": "World Tour of Solar Butterfly at IITH",
-        "description": "12000 saplings of 38 native plant species planted in Miyawaki Method",
+        "description": "12000 saplings of 38 native plant species planted in Miyawaki Method...",
         "readMoreHref": "/news/solar-butterfly",
         "imagePath":"pic5.jpg"
     },
     {
         "timestamp":"",
         "title": "Prayas RDC - IITH",
-        "description": "",
-        "readMoreHref": "/news/prayas-rdc",
-        "imagePath":"pic6.png"
+        "description": "Prayas, a student-led initiative at iith is dedicated to empowering rural...",
+        "readMoreHref": "https://prayas.rdc.iith.ac.in/",
+        "imagePath":"prayas_rdc.jpg"
     },
     {
         "timestamp":"",
@@ -54,6 +54,13 @@
         "description": "IIT Hyderabad has developed a process to improving the performance of third generation solar cells by working with Dye Sensitized Solar Cells",
         "readMoreHref": "https://www.deccanchronicle.com/nation/current-affairs/180619/iit-hyderabad-develops-way-to-improve-solar-cells.html",
         "imagePath":"solar_cell.jpeg"
+    },
+    {
+        "timestamp":"",
+        "title": "Stay cool is the mantra at IITH",
+        "description": "IITH, one of the premier institutes in India, is all set to use the radiant cooling technology",
+        "readMoreHref": "https://www.thehindu.com/news/national/andhra-pradesh/stay-cool-is-the-mantra-at-iith/article5556860.ece",
+        "imagePath":"radiant_cooling.jpeg"
     }
 ]
 
