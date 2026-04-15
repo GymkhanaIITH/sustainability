@@ -5,8 +5,8 @@ const { data = [], isImage = true } = Astro.props;
 
     <div id="newsletter-carousel" class="keen-slider">
     {data.map((item, index) => (
-<div class="keen-slider__slide bg-white text-black shadow-xl p-4 font-bold rounded-lg mb-12 flex flex-col items-center text-center w-auto">
-    
+<div class="keen-slider__slide bg-white text-black shadow-xl p-4 font-bold rounded-lg mb-12 flex flex-col items-center text-center w-auto" >
+    <a href={item.readMoreHref} target="_blank" rel="noopener noreferrer">
     <h3 class="text-lg font-semibold mb-2">{item.title}</h3>
 
     {isImage && (
@@ -17,7 +17,7 @@ const { data = [], isImage = true } = Astro.props;
             class="rounded-md object-cover w-36 h-48"
         />
     )}
-
+</a>
 </div>
     ))}
 </div>
